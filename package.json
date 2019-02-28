@@ -5,11 +5,12 @@
   "main": "nant2.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yelouafi/snabbdom-starter.git"
+    "url": "https://github.com/pushplata123/snabdom.git"
   },
   "author": "Yassine Elouafi <yelouafi@gmail.com>",
   "dependencies": {
-    "snabbdom": "^0.2.0"
+    "snabbdom": "^0.2.0",
+    "snabbdom-jsx": "^0.4.2"
   },
   "devDependencies": {
     "babel": "^5.2.13",

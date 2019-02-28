@@ -1,7 +1,11 @@
+/** @jsx html */
 "use strict";
 
 import snabbdom from 'snabbdom';
 import h from 'snabbdom/h';
+import {html} from 'snabbdom-jsx';
+import list from './list';
+
 
 const patch = snabbdom.init([
   require('snabbdom/modules/class'),          // makes it easy to toggle classes
@@ -10,8 +14,14 @@ const patch = snabbdom.init([
   require('snabbdom/modules/eventlisteners'), // attaches event listeners
 ]);
 
+const main=(oldVnode, view)=> {
+  const newVnode = view();
+  patch(oldVnode, newVnode);
+}
 
-var vnode = h('div', {style: {fontWeight: 'bold'}}, 'Hello world');
-patch(document.getElementById('placeholder'), vnode);
 
 
+main(
+  document.getElementById('root'), 
+  list
+);
